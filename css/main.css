@@ -493,6 +493,31 @@
 body::-webkit-scrollbar-track {
     border-radius: 0;
 }
+.intro{
+    color: #A9A9A9;
+    font-style: italic;
+}
+.TinkER{
+    color: #19ae8d
+}
+.TinkER-Sign{
+    color: #16987b
+}
+.Lovecraft{
+    color: #a593d8
+}
+.Lovecraft-Sign{
+    color: #775bc3
+}
+.Milo{
+    color: #87CEEB
+}
+.Milo-Sign{
+    color: #60B6FF
+}
+.Pink{
+    color: #FFB6C1
+}
 .content {
     transition: opacity 0.25s;
 }
