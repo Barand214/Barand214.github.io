@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>Archives | 梦云の小窝</title>
+    <title>Collapsar - 定向观测 | 梦云の小窝</title>
     <meta name="author" content="梦云" />
     <meta name="description" content="时光的流痕" />
     <meta name="keywords" content="" />
@@ -39,8 +39,17 @@
 <script src="/js/lib/preview.js"></script>
 
 
+<script src="https://s4.zstatic.net/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"></script>
+<script src="/js/lib/crypto.js"></script>
 
-<script src="/js/lib/search.js"></script>
+
+
+
+
+<script src="https://s4.zstatic.net/ajax/libs/waline/2.15.8/waline.min.js"></script>
+<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/waline/2.15.8/waline.min.css" />
+<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/waline/2.15.8/waline-meta.min.css" />
+
 
 
 
@@ -152,151 +161,47 @@
 </transition>
 
         <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
-            
-<div id="archives">
-    
-    <input id="search-bar" class="input" placeholder="搜索" v-model="rawSearch" />
-    
-    <div id="timeline-wrap" ref="timeline">
+            <div class="article">
+    <div>
+        <h1>Collapsar - 定向观测</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2025/5/29
+        </span>
         
-        <div class="timeline" data-title="记一次不期而至的通话">
-            <div class="timeline-tail"></div>
-            <div class="timeline-content">
-                <div class="item-time">2024/11/10</div>
-                <a href="/2024/11/10/%E8%AE%B0%E4%B8%80%E6%AC%A1%E4%B8%8D%E6%9C%9F%E8%80%8C%E8%87%B3%E7%9A%84%E9%80%9A%E8%AF%9D/">
-                    <h3>记一次不期而至的通话</h3>
-                </a>
-                <div class="info">
-                    
-                    
-                    <span class="tags">
-                        <span class="icon">
-                            <i class="fa-solid fa-tags fa-fw"></i>
-                        </span>
-                        
-                        
-                        <span class="tag">
-                            
-                            <a href="/tags/%E7%AC%94%E4%B8%8B%E7%9A%84%E5%B2%81%E6%9C%88/" style="color: #ff7d73">
-                                笔下的岁月
-                            </a>
-                        </span>
-                        
-                    </span>
-                    
-                </div>
-            </div>
-        </div>
-        
-        <div class="timeline" data-title="helloworld">
-            <div class="timeline-tail"></div>
-            <div class="timeline-content">
-                <div class="item-time">2025/5/11</div>
-                <a href="/2025/05/11/hello-world/">
-                    <h3>Hello World</h3>
-                </a>
-                <div class="info">
-                    
-                    
-                </div>
-            </div>
-        </div>
-        
-        <div class="timeline" data-title="高中化学物质推断题">
-            <div class="timeline-tail"></div>
-            <div class="timeline-content">
-                <div class="item-time">2025/5/18</div>
-                <a href="/2025/05/18/%E9%AB%98%E4%B8%AD%E5%8C%96%E5%AD%A6%E7%89%A9%E8%B4%A8%E6%8E%A8%E6%96%AD%E9%A2%98/">
-                    <h3>高中化学物质推断题</h3>
-                </a>
-                <div class="info">
-                    
-                    
-                </div>
-            </div>
-        </div>
-        
-        <div class="timeline" data-title="collapsar-深潜日志">
-            <div class="timeline-tail"></div>
-            <div class="timeline-content">
-                <div class="item-time">2025/5/22</div>
-                <a href="/diving-into-black-hole/">
-                    <h3>Collapsar - 深潜日志</h3>
-                </a>
-                <div class="info">
-                    
-                    
-                    <span class="tags">
-                        <span class="icon">
-                            <i class="fa-solid fa-tags fa-fw"></i>
-                        </span>
-                        
-                        
-                        <span class="tag">
-                            
-                            <a href="/tags/%E7%AC%94%E4%B8%8B%E7%9A%84%E5%B2%81%E6%9C%88/" style="color: #ff7d73">
-                                笔下的岁月
-                            </a>
-                        </span>
-                        
-                    </span>
-                    
-                </div>
-            </div>
-        </div>
-        
-        <div class="timeline" data-title="comment-test">
-            <div class="timeline-tail"></div>
-            <div class="timeline-content">
-                <div class="item-time">2025/5/27</div>
-                <a href="/2025/05/27/Comment-Test/">
-                    <h3>Comment-Test</h3>
-                </a>
-                <div class="info">
-                    
-                    
-                </div>
-            </div>
-        </div>
-        
-        <div class="timeline" data-title="collapsar-定向观测">
-            <div class="timeline-tail"></div>
-            <div class="timeline-content">
-                <div class="item-time">2025/5/29</div>
-                <a href="/collapsar-observation/">
-                    <h3>Collapsar - 定向观测</h3>
-                </a>
-                <div class="info">
-                    
-                    
-                </div>
-            </div>
-        </div>
-        
-        <div class="timeline" data-title="updatedparts">
-            <div class="timeline-tail"></div>
-            <div class="timeline-content">
-                <div class="item-time">2025/5/29</div>
-                <a href="/updated-parts/">
-                    <h3>Updated Parts</h3>
-                </a>
-                <div class="info">
-                    
-                    <span class="category">
-                        <a href="/categories/Config/">
-                            <span class="icon">
-                                <i class="fa-solid fa-bookmark fa-fw"></i>
-                            </span>
-                            Config
-                        </a>
-                    </span>
-                    
-                    
-                </div>
-            </div>
-        </div>
         
     </div>
+    
+    
+    <input
+        id="crypto"
+        :class="['input', cryptoStatus]"
+        :disabled="cryptoStatus === 'success'"
+        ref="crypto"
+        placeholder="文章被加密，请输入密码"
+        data-encrypted="U2FsdGVkX1/7vBTosP2e5NjnCOnsDmz/tNU8HABZ2jb35gUr/VuguJYZgZIQz5/WOcpIVlchXo/zRSB/89RdC48H3RHQb/KVkRMTFDJR4Bq1j8+ykcgFcb1ZF5l19E9G1AQDoHpj3W7WCkEpJSIhiJu076RgYDUUht1KCauSKjF2ipnis8IjDBly7eS16wzVUh23TlXqgX+dtQDIx1ILVbbRnUCEkAuWC1YcI+H+KkdReGvS7ns2rGJQ/G05wVhq2ni+nX5HXPQfTHTiP7IHGR8T7zzTNLSL/U17bnutEc6cmZFTykwrjIvzZuzQn90Xm6db4u516Yte3Mns9tuUY34YTsyvU7VXJ3+Mta/HrQw8FbEH/owDqGi2gvOToMfAU/WS1BIj7I2mG9E7QwhPhNhzAxCgkRT3UAThVQB1SsGxMYNdo2K/YL+hicW7VQ5bZCbY88fSwkZsIhOGgh93WEck0yOR/1xC7/8P0Rxz9QCKISAYOOrGNt0bFa81CUkZNzVGHrpshM3YgAJY89IgLM3sPxP8LZYUENUFEb9QZr3ivoa66SLfRYx2lAyd1YUusih1T7HQCOOFk88n8TUI6XTpODpSJ+4COcNCVfk7RVwahOyUojFxM8BKcY5CT/wb/eVC5hWjcjn9+Thl08Aa0uYQQyyHIkObtXWui4vvpxx9SciHQjEikgG9FAuEaj1HbXsqPuSCMsKhPj/POxiJ2yeIT9qVA/+8c0db4ji6ZtHX8od02D97VGAO1uynbdnvR+2DtPdbXuNooxXKQ2ulIOQ/mqU8KClxnw4EGbMae9sYjri4dUowBuf+zeH6zMO8HE+h5XMXIluxZAkNIVuj1iM6+m2q1ce3y/qTBMVJ2G9OkU2UneiQQ690EEQZfl0K7kX06WB/xbIjm+ZDDwzkP2KF66/4mk7sYULDzB+bx5WJe+UtYf2L5aeEzx9CtvtfLaDvRMj8LzlY0rHyOfsjC4DovlT08JjFDEpu+AcM4DGrwjNtL6iyMjzV4gbDsRiozw5n1yOqKRYRXVgZmihm57Bh+pSSxHL/4rFlw6I81hZnIsiiGPTf4EpBKNpoPvL+C9d0fTaXGJPI2Alp7Hk39MR0jkrUHGu426DY/iXr2KKyS75d5qCQQMLGGIZyUQdKvtQY5ORgn468byCO0rxG6T1xO+DpqnLo2SVwY+el28b9g8EZeL7qYKAqwfFacnsXi6awQ4iYXqFdhYxE6zqHVBun9uclxC9HIl4DImGFlyXtnWKEb+3De6L4x6Qg5zMfJyABjJB9B24ER3h7bxTCUucRgzQ/bMkEZ2YaGUyfEmGhWUqRDviXZZSQVyO/tqGNvDy9qPnAju+c0UqrPnSuvyClnic8WmltOWyBh6RxI9FgL71+F2oIVp0LiNc94S0DYd2DPKT1C11A1I9UTShUjwMM5z+GA+jcF2InKn70ztJF0XKP4oz0HyHMKYvKZfrN9eYuUJaZjru7i0l8ebyjLw/LPFjfHdu/eMHf4J5mS8Jn7m0ba0Ngomq2LEvJPm0j3bE+eBFzcat4ZZJn0Cfrkzd7+KEQxoq0vs1Sk431JVa5qYJG0L3uw7aFnXDHaekjSKSJqKjyE0pGLHjwO5sYDhqVAFzWbrfH3/vdBp4Gda2yy35TLke5vIR93dOSS85DGRuiUnFhxDa3nIXQUY/ZJePZ9Um5clS8os+khz1xgZXaqHl5iQCEGsuNmItukQeWXOC/1uciNF0e2NXkOZIjzN5ekeZKvwOSxRArFEHkl2mOmKOo7aNQadAwdeYo0zf/"
+        data-shasum="68119aa8343f2cbc15be4244b47f8eea169bfffc2bf72ccf483347ce629d2617"
+        v-model="crypto"
+    />
+    <transition name="fade">
+        <div class="content" ref="content" v-show="cryptoStatus === 'success'"></div>
+    </transition>
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css" />
+    <div id="comment">
+        <div id="waline-container"></div>
+    </div>
+    
+    
+    
 </div>
 
             <footer id="footer">
@@ -339,6 +244,29 @@
     ></canvas>
     <script src="/js/background.min.js"></script>
     <script src="/js/main.js"></script>
+    
+    
+
+
+<script>
+    Waline.init({
+        el: "#waline-container",
+        serverURL: "https://weblog-comments.vercel.app",
+        commentCount: true,
+        pageview: false,
+        emoji: "https://unpkg.com/@waline/emojis@1.2.0/weibo,https://unpkg.com/@waline/emojis@1.2.0/alus,https://unpkg.com/@waline/emojis@1.2.0/bilibili,https://unpkg.com/@waline/emojis@1.2.0/qq,https://unpkg.com/@waline/emojis@1.2.0/tieba,https://unpkg.com/@waline/emojis@1.2.0/tw-emoji".split(","),
+        meta: "nick,mail,link".split(","),
+        requiredMeta: "nick".split(","),
+        lang: "zh-CN",
+        wordLimit: 0,
+        pageSize: "10",
+        login: "enable",
+        
+    });
+</script>
+
+
+
     
 </body>
 </html>
